@@ -13,7 +13,7 @@ export class ProductsService {
 		id: 1,
 		name: 'lasanha',
 		price: 10,
-		categoriId: 1,
+		categoriId: '1',
 		active: true,
 		}]
 	}
@@ -22,7 +22,7 @@ export class ProductsService {
 		return [{id:1,
 			name: 'lasanha',
 			price: 10,
-			categoriId: 1,
+			categoriId: '1',
 			active: true, 
 		}]
 	}
@@ -31,7 +31,7 @@ export class ProductsService {
 		id:1,
 		name: 'lasanha',
 		price: 10,
-		categoriId: 1,
+		categoriId: '1',
 		active: true, 
 		}]
 	}

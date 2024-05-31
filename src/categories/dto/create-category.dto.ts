@@ -1,12 +1,24 @@
 import { IsString, IsBoolean } from 'class-validator';
 
 export class CreateCategoryDto {
-	@IsString()
+	@IsString(
+		{
+			message: "O campo id deve ser uma string."
+		}
+	)
 	id: string;
 
-	@IsString()
+	@IsString(
+		{
+			message: "O campo name deve ser uma string."
+		}
+	)
 	name: string;
 
-	@IsBoolean()
+	@IsBoolean(
+		{
+			message: "O campo active deve ser um valo boolean."
+		}
+	)
 	active: boolean;
 }

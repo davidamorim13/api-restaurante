@@ -10,10 +10,10 @@ export class CategoriesService {
 
 	findAll() {
 		return [{
-			id: 1,
+			id: '1',
 			name: 'Massas',
 			active: true,
-			}]
+		}]
 		
 	}
 	findOne(id: number) {
@@ -26,9 +26,9 @@ export class CategoriesService {
 
 	update(id: number, updateCategoryDto: UpdateCategoryDto) {
 		return [{
-		name: 'Massas',
+			name: 'Massas',
 		active: true,
-	}]
+		}]
 	
 	}
 
