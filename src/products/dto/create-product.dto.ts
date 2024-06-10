@@ -24,6 +24,7 @@ export class CreateProductDto {
 		}
 	)
 	categoriId: string;
+	
 	@IsBoolean(
 		{
 			message: "O campo active deve receber um valor do tipo boolean."
