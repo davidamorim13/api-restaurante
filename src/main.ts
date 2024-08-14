@@ -9,6 +9,8 @@ async function bootstrap() {
 		new ValidationPipe({ transform:true })
 	)
 
+	app.enableCors();
+
 	const config = new DocumentBuilder()
 		.setTitle("Restaurante api")
 		.build()
