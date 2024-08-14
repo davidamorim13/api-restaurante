@@ -1,12 +1,8 @@
 import { IsBoolean, IsNumber, IsString } from 'class-validator';
 
 export class CreateProductDto {
-	@IsString(
-		{
-			message: "O campo id deve ser uma string."
-		}
-	)
-	id: string;
+	@IsNumber()
+	id: number;
 
 	@IsString(
 		{
@@ -18,12 +14,8 @@ export class CreateProductDto {
 	@IsNumber()
 	price: number;
 
-	@IsString(
-		{
-			message: "O campo categoriId deve ser uma string."
-		}
-	)
-	categoriId: string;
+	@IsNumber()
+	categoriId: number;
 	
 	@IsBoolean(
 		{

@@ -9,8 +9,8 @@ export class UpdateProductDto extends PartialType(CreateProductDto) {
 	@IsNumber()
 	price: number;
 
-	@IsString()
-	categoriId: string;
+	@IsNumber()
+	categoriId: number;
 
 	@IsBoolean()
 	active: boolean;

@@ -1,12 +1,8 @@
-import { IsString, IsBoolean } from 'class-validator';
+import { IsString, IsBoolean, IsNumber } from 'class-validator';
 
 export class CreateCustomerDto {
-  @IsString(
-    {
-			message: "O campo id deve ser uma string."
-		}
-  )
-  id: string;
+  @IsNumber()
+  id: number;
 
   @IsString(
     {
