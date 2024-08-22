@@ -10,6 +10,9 @@ export class CategoryEntity {
     name: string
 
     @Column()
+    description: string
+
+    @Column()
     active: boolean
 
 }

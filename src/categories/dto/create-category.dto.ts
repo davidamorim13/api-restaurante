@@ -1,7 +1,7 @@
-import { IsString, IsBoolean, IsNumber } from 'class-validator';
+import { IsString, IsBoolean, IsNumber, IsNumberString } from 'class-validator';
 
 export class CreateCategoryDto {
-	@IsNumber()
+	@IsNumberString()
 	id: number;
 
 	@IsString(
@@ -10,6 +10,13 @@ export class CreateCategoryDto {
 		}
 	)
 	name: string;
+
+	@IsString(
+		{
+				message: "O campo da descrição deve ser uma string."
+			}
+	  )
+	  description: string;
 
 	@IsBoolean(
 		{
