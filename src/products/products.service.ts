@@ -4,6 +4,7 @@ import { UpdateProductDto } from './dto/update-product.dto';
 import { InjectRepository } from '@nestjs/typeorm';
 import { ProductEntity } from './entities/product.entity';
 import { Repository } from 'typeorm';
+import { skip } from 'node:test';
 
 @Injectable()
 export class ProductsService {
@@ -18,7 +19,17 @@ export class ProductsService {
 	}
 
 	findAll() {
-		return this.repository.find()
+
+		const page = 0
+		const intens_per_pagina = 1;
+
+		const pagination = {
+			skip: 1,
+			take: 2
+		}
+
+
+		return this.repository.find( {...pagination, order: {id: 'ASC'}} )
 	}
 
 	findOne(id: number) {
